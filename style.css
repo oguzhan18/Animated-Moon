@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+body {
+  height:100%;
+  position:relative;
+  background-color:#000000;
+  background-image:radial-gradient(#000000 0%, #000000 70%);
+  background-size:100% 600px;
+  background-repeat:no-repeat;
+}
+.neon{
+  position:absolute;
+  top: 370px;
+  left:50%;
+  transform:translate(-50%,-50%);
+  margin:0;
+  padding:0 20px;
+  color:#fff;
+  text-shadow:0 0 20px #ff005b;
+  
+}
+.neon:after{
+  content:attr(data-text);
+  position:absolute;
+  top: 500%;
+  left:0;
+  padding: 0 20px;
+  z-index:-1;
+  color:#ff005b;
+  filter:blur(15px);
+}
+.neon:before{
+  content:'';
+  position:absolute;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#fe3a80;
+  z-index:-2;
+  opacity:.5;
+  filter:blur(40px);
+  
+}
+.moon {
+  position:absolute;
+  top:150px;
+  left:50%;
+  width:28rem;
+  height:28rem;
+  overflow:hidden;
+  border-radius:50%;
+  transform:translateX(-50%);
+  box-shadow:0 0 400px 100px #000000;
+}
+.moon:after {
+  content:'';
+  position:absolute;
+  top:1px;
+  right:1px;
+  bottom:1px;
+  left:1px;
+  z-index:-1;
+  border-radius:50%;
+  background-color:#fff5bb;
+  background-image:
+    radial-gradient(#f2e594 0%, #f2e594 70%, transparent 70%, transparent 100%),
+    radial-gradient(#f2e594 0%, #f2e594 70%, transparent 70%, transparent 100%),
+    radial-gradient(#f2e594 0%, #f2e594 70%, transparent 70%, transparent 100%),
+    radial-gradient(#f2e594 0%, #f2e594 70%, transparent 70%, transparent 100%),
+    radial-gradient(#f2e594 0%, #f2e594 70%, transparent 70%, transparent 100%);
+  background-size:10px 10px, 5px 5px, 15px 15px, 10px 10px, 7px 7px;
+  background-repeat:no-repeat;
+  background-position:10% 20%, 70% 15%, 35% 70%, 80% 50%, 70% 75%;
+    box-shadow:inset -15px -15px 0 #f2e594;
+}
+.moon:before {
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:222;
+  background:#000000;
+  border-radius:50%;
+  transform:translateX(-100%);
+  -webkit-animation:phase 20s infinite linear;
+          animation:phase 20s infinite linear;
+}
+@-webkit-keyframes phase {
+  0%, 100% {transform:translateX(-100%);}
+  10% {transform:translateX(-100%);}
+  99.999% {transform:translateX(100%);}
+}
+@keyframes phase {
+  0%, 100% {transform:translateX(-100%);}
+  10% {transform:translateX(-100%);}
+  99.999% {transform:translateX(100%);}
+}
+/* 
+ ██████╗  ██████╗ ██╗   ██╗███████╗██╗  ██╗ █████╗ ███╗   ██╗     ██████╗ █████╗ ██████╗ ██████╗ ████████╗
+██╔═══██╗██╔════╝ ██║   ██║╚══███╔╝██║  ██║██╔══██╗████╗  ██║    ██╔════╝██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝
+██║   ██║██║  ███╗██║   ██║  ███╔╝ ███████║███████║██╔██╗ ██║    ██║     ███████║██████╔╝██████╔╝   ██║   
+██║   ██║██║   ██║██║   ██║ ███╔╝  ██╔══██║██╔══██║██║╚██╗██║    ██║     ██╔══██║██╔══██╗██╔══██╗   ██║   
+╚██████╔╝╚██████╔╝╚██████╔╝███████╗██║  ██║██║  ██║██║ ╚████║    ╚██████╗██║  ██║██║  ██║██║  ██║   ██║   
+ ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝     ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+                                                                     ██                                     
+ ██████╗ ███████╗███████╗██████╗  ██████╗ ██████╗ ██████╗ 
+██╔══██╗██╔════╝██╔════╝██╔══██╗██╔════╝██╔═══██╗██╔══██╗
+██║  ██║█████╗  █████╗  ██████╔╝██║     ██║   ██║██║  ██║ ----------------------------------------------
+██║  ██║██╔══╝  ██╔══╝  ██╔═══╝ ██║     ██║   ██║██║  ██║ 
+██████╔╝███████╗███████╗██║     ╚██████╗╚██████╔╝██████╔╝
+╚═════╝ ╚══════╝╚══════╝╚═╝      ╚═════╝ ╚═════╝ ╚═════╝ 
+
+ ██████╗ █████╗ ██████╗ ████████╗     █████╗ ██████╗ ██████╗ 
+██╔════╝██╔══██╗██╔══██╗╚══██╔══╝    ██╔══██╗██╔══██╗██╔══██╗
+██║     ███████║██████╔╝   ██║       ███████║██████╔╝██████╔╝
+██║     ██╔══██║██╔══██╗   ██║       ██╔══██║██╔═══╝ ██╔═══╝ 
+╚██████╗██║  ██║██║  ██║   ██║       ██║  ██║██║     ██║     
+ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝       ╚═╝  ╚═╝╚═╝     ╚═╝     
+*/
